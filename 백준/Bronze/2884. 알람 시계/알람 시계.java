@@ -11,14 +11,11 @@ public class Main {
 
 		if (min - 45 < 0) {
 			hour--;
+			if (hour == -1)
+				hour = 23;
 			min = 60 + (min - 45);
 		} else
 			min = (min - 45);
-
-		if (hour == -1)
-			hour = 23;
-		else
-			hour %= 24;
 
 		System.out.println(hour + " " + min);
 
